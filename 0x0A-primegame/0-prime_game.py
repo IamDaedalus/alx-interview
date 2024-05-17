@@ -16,6 +16,7 @@ def sieve(n):
 
 
 def isWinner(x, nums):
+    """ this method solves for the winner """
     if x <= 0 or not nums:
         return None
 
@@ -23,6 +24,7 @@ def isWinner(x, nums):
     primes = sieve(max_n)
 
     def play_game(n):
+        """ this inner method starts the game """
         nonlocal primes
         remaining = set(range(1, n + 1))
         turn = 0  # 0 for Maria, 1 for Ben
